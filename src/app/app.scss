@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.headChoice{
+    .action-sheet-group{
+        .action-sheet-title{
+            padding: 1rem;
+            font-size: 1.8rem;
+            color: #000;
+            background: #fefef9;
+        }
+        .disable-hover{
+            min-height: auto;
+            font-size: 1.6rem;
+            color: #000;
+            background: #fff;
+            position: relative;
+            .button-inner{
+                justify-content: flex-start;
+                position: relative;
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+        .action-sheet-cancel{
+            background: #fefef9;
+            .button-inner{
+                justify-content: center;
+                font-weight: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+<ion-content >
+
+<ion-grid class="grid-basic-page">
+
+  <ion-row>
+      <ion-col col-9 push-3>  
+      <div>    
+          <button ion-button   clear small (click)="oltquery()">OLT设备</button>
+      </div>
+    </ion-col>
+
+    <ion-col col-3 pull-9>
+      <div>
+         <ion-icon name="people" color="secondary" ></ion-icon> 
+      </div>
+    </ion-col>
+  </ion-row>
+
+       <ion-row>
+      <ion-col col-9 push-3>
+        <div>
+        <button ion-button   clear small (click)="obdquery()">OBD设备</button>
+        </div>
+      </ion-col>
+      <ion-col col-3 pull-9>
+        <div>
+        <ion-col><ion-icon name="person"  color="bright"></ion-icon>
+        </ion-col>
+        </div>
+      </ion-col>
+     </ion-row>
+
+      <ion-row>
+       <ion-col col-9 push-3>
+        <div>
+          <button ion-button   clear small (click)="dpquery()">DP设备</button>
+        </div>
+       </ion-col>
+       <ion-col col-3 pull-9>
+         <div>
+           <ion-col>
+            <ion-icon name="contact" color="danger"></ion-icon>
+          </ion-col>
+         </div>
+        </ion-col>
+       </ion-row>
+</ion-grid>
+
+
+ <div class="grid-basic-page">
+  
+  <div><h1>{{devicetypename}}设备展示表</h1></div>
+  <div class="row">
+    <div class="col-md-6">
+      <label>编码：</label>
+      <input type="text" id="code" sise="2">
+    </div>
+    <div class="col-md-6">
+      <label>名称：</label>
+      <input type="text" id="name" sise="2">
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-md-6">
+      <label>&nbsp;&nbsp;&nbsp;&nbsp;ID：</label>
+      <input type="text" id="id" class="ID">
+    </div>
+    <div class="col-md-6">
+      <button ion-button  clear small (click)='query()'>查询</button>
+      <button ion-button  clear small (click)="add('4A')">新增</button>
+    </div>
+  </div>
+      
+  <table class="table">  
+        <thead>  
+            <tr><th>设备编码</th><th>设备名称</th><th>设备描述</th><th>操作</th></tr>  
+        </thead>  
+        <tbody>  
+          <!-- (click)="openModal({charNum: 1})" -->
+                <tr *ngFor="let item of datas" (click)="openModal({charNum: 0})">
+                <td>{{item.name}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.id}}</td>
+                <td><button ion-button small>详情</button><button ion-button small (click)="modify(item.code)">修改</button><button ion-button color="danger" small (click)="remove(item.id)">删除</button>
+                </td>   
+          </tr> 
+                
+        </tbody>  
+    </table>
+</div>
+
+
+
+
+  <ion-fab top right edge class="fabs-basic">
+    <button ion-fab color="vibrant" mini ><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+    
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      
+      <button ion-fab (click)='linkingwe()'><ion-icon name="people" ></ion-icon></button>
+
+      <button ion-fab color="danger" (click)='backlogin()'><ion-icon name="arrow-back"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab> 
+
+
+</ion-content>
+
+     

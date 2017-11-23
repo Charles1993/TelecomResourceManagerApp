@@ -1,0 +1,42 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<p align="center">电信资源APP</p><br><br>
+     <div class="container" id="logincontainer" > 
+     <form role="form">
+         <div class="form-group">
+             <span class="glyphicon glyphicon-user" aria-hidden="true" ></span>
+             <label for="name">username</label>
+             <div class="col-md-10" >
+                 <input type="text" class="form-control" id="name" size="10" placeholder="input your name">
+             </div>
+         </div> 
+         <div class="form-group">
+             <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true" ></span>
+              <label for="password">password</label>
+              <div class="col-md-10">
+                 <input type="password" class="form-control" id="password" size="10" placeholder="input your password">
+             </div>
+         </div> 
+         <div class="form-group" >
+                 <div class="col-md-0.2">
+                     <span class="glyphicon glyphicon-hand-right" aria-hidden="true" id="handlelabel"></span>
+                 </div>
+                 <div class="col-md-5" id="message">
+                     
+                     <button ion-button color="secondary"(click)="login()">登录</button>
+
+                     <button type="button" class="btn btn-warning" >
+                         <span class="glyphicon glyphicon-phone-alt" aria-hidden="true" ></span>  注册
+                     </button>
+                     <button type="button" class="btn btn-warning" >
+                         <span class="glyphicon glyphicon-phone-alt" aria-hidden="true" ></span>  忘记密码
+                     </button>
+                 </div>
+         </div> 
+     </form>
+     </div>

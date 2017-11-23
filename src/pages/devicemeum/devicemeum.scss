@@ -1,0 +1,53 @@
+
+.grid-basic-page {
+
+  ion-col div {
+    background-color: #f0f5ff;
+    border: 0px;
+    padding: 9px;
+    text-align: center;
+  }
+    ion-icon {
+    font-size: 20px;
+  }
+  h1 {
+  text-align: center;
+  }
+  ion-row {
+    height: 50px;
+  }
+
+ button{
+  height: 15px;
+ }
+
+}
+
+.table{
+	td{
+	width: 50px;
+	}
+	th{
+	width: 50px;
+	}
+}
+
+
+.icons-basic-page {
+  ion-icon {
+    font-size: 700px;
+  }
+
+  ion-row {
+    height: 100px;
+    flex-wrap: wrap;
+  }
+
+   ion-col div {
+    background-color: #f0f5ff;
+    border: 1px solid #e6e9ee;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+  }
+}
